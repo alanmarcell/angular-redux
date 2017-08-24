@@ -2,23 +2,7 @@ import { Course } from '../courses/course';
 import { IAppState } from './IAppState';
 import { FILTER_COURSES, REQUEST_COURSES_SUCCESS } from '../courses/course.actions'
 
-const courses = [
-  {
-    id: 1,
-    name: 'Building Apps with React (local)',
-    topic: 'ReactJs'
-  },
-  {
-    id: 2,
-    name: 'Building Apps with Angular (local)',
-    topic: 'Angular'
-  },
-  {
-    id: 3,
-    name: 'Building Apps with Angular and Redux (local)',
-    topic: 'Angular and Redux'
-  }
-]
+const courses = []
 
 const initialState: IAppState = {
   courses,

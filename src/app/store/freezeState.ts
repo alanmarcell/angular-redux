@@ -2,12 +2,10 @@ function deepFreeze(o) {
   Object.freeze(o);
 
   Object.getOwnPropertyNames(o).forEach((prop) => {
-    if (
-      o.hasOwnProperty(prop)
+    if (o.hasOwnProperty(prop)
       && o[prop] !== null
-      && typeof o[prop] === 'object'
-      && !Object.isFrozen(o[prop])
-    ) {
+      && (typeof o[prop] === 'object')
+      && !Object.isFrozen(o[prop])) {
       deepFreeze(o[prop]);
     }
   });
